@@ -29,7 +29,7 @@ searchVideo = async () => {
     loadingTime: "LOADING",
     isErrorInLoading: false
   })
-const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&order=viewCount&q=${this.state.searchKeyword}&type=video&videoDefinition=high&key=AIzaSyDAyYIU0uRJadfSwFyYvrEhv86RfTGuqnM`);
+const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&order=viewCount&q=${this.state.searchKeyword}&type=video&videoDefinition=high&key=AIzaSyD6INfkUdm90mY4RL_WU5OGN9BrtHlDnOc`);
 const myJson = await response.json();
 console.log("myJson " , myJson);
 if(myJson.items.length == 0) {
@@ -49,7 +49,7 @@ showMostPopularVideos = async () => {
   this.setState({
     loadingTime: 'LOADING'
   })
-  const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&chart=mostPopular&maxResults=15&regionCode=IN&key=AIzaSyDAyYIU0uRJadfSwFyYvrEhv86RfTGuqnM`);
+  const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&chart=mostPopular&maxResults=15&regionCode=IN&key=AIzaSyD6INfkUdm90mY4RL_WU5OGN9BrtHlDnOc`);
 const myJson = await response.json();
 console.log("myJson " , myJson);
 this.setState({
